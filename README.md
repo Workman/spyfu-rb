@@ -8,7 +8,7 @@ Here is a simple example on how to make a request to the API. A full listing of 
 
 ```ruby
 spyfu = SpyFu.client('1234-12345-12345-1234', 'YOURSECRETKEY')
-result = spyfu.kss_api.get_term_page_keywords(:q => 'spyfu api', :r => 100).request
+result = spyfu.kss_api.get_term_page_keywords(:q => 'spyfu api', :r => 100)
 result.body # API returns a JSON object with results
 ```
 
@@ -27,9 +27,9 @@ gem 'spyfu'
 You can access the [Core API](https://www.spyfu.com/api/docs/core).
 
 ```ruby
-spyfu.ad_history_api.domain_ad_history(...).request
-spyfu.ad_history_api.domain_ad_history_with_metrics(...).request
-spyfu.ad_history_api.term_ad_history(...).request
+spyfu.ad_history_api.domain_ad_history(...)
+spyfu.ad_history_api.domain_ad_history_with_metrics(...)
+spyfu.ad_history_api.term_ad_history(...)
 ```
 
 ## Core API
@@ -37,12 +37,12 @@ spyfu.ad_history_api.term_ad_history(...).request
 You can access the [Core API](https://www.spyfu.com/api/docs/core).
 
 ```ruby
-spyfu.core_api.get_domain_metrics_us(...).request
-spyfu.core_api.get_domain_metrics_uk(...).request
-spyfu.core_api.get_domain_budget_history_us(...).request
-spyfu.core_api.get_domain_budget_history_uk(...).request
-spyfu.core_api.get_domain_competitors_us(...).request
-spyfu.core_api.get_domain_competitors_uk(...).request
+spyfu.core_api.get_domain_metrics_us(...)
+spyfu.core_api.get_domain_metrics_uk(...)
+spyfu.core_api.get_domain_budget_history_us(...)
+spyfu.core_api.get_domain_budget_history_uk(...)
+spyfu.core_api.get_domain_competitors_us(...)
+spyfu.core_api.get_domain_competitors_uk(...)
 ```
 
 ## KSS API
@@ -50,8 +50,8 @@ spyfu.core_api.get_domain_competitors_uk(...).request
 You can access the [Keyword SmartSearch API](https://www.spyfu.com/api/docs/related-keywords).
 
 ```ruby
-spyfu.kss_api.related_keywords(:q => 'spyfu api', :r => 100).request
-spyfu.kss_api.domain_related_keywords(:q => 'spyfu api', :r => 100).request
+spyfu.kss_api.related_keywords(:q => 'spyfu api', :r => 100)
+spyfu.kss_api.domain_related_keywords(:q => 'spyfu api', :r => 100)
 ```
 
 ## Leads API
@@ -59,9 +59,9 @@ spyfu.kss_api.domain_related_keywords(:q => 'spyfu api', :r => 100).request
 You can access the [Leads API](https://www.spyfu.com/api/docs/leads).
 
 ```ruby
-spyfu.leads_api.get_contact_card(...).request
-spyfu.leads_api.get_grid(...).request
-spyfu.leads_api.get_top_list(...).request
+spyfu.leads_api.get_contact_card(...)
+spyfu.leads_api.get_grid(...)
+spyfu.leads_api.get_top_list(...)
 ```
 
 ## URL API
@@ -69,10 +69,10 @@ spyfu.leads_api.get_top_list(...).request
 You can access the [URL API](https://www.spyfu.com/api/docs/url).
 
 ```ruby
-spyfu.url_api.organic_kws(:q => "http://resources.spyfu.com/blog/", :r => 100).request
-spyfu.url_api.paid_kws(:q => "http://resources.spyfu.com/blog/", :r => 100).request
-spyfu.url_api.paid_estimates(...).request
-spyfu.url_api.organic_estimates(...).request
+spyfu.url_api.organic_kws(:q => "http://resources.spyfu.com/blog/", :r => 100)
+spyfu.url_api.paid_kws(:q => "http://resources.spyfu.com/blog/", :r => 100)
+spyfu.url_api.paid_estimates(...)
+spyfu.url_api.organic_estimates(...)
 ```
 
 ## Weekly Tracking API
@@ -80,11 +80,11 @@ spyfu.url_api.organic_estimates(...).request
 You can access the [Weekly Tracking API](https://www.spyfu.com/api/docs/weekly-tracking).
 
 ```ruby
-spyfu.weekly_tracking_api.add_terms(...).request
-spyfu.weekly_tracking_api.get_groups(...).request
-spyfu.weekly_tracking_api.get_terms(...).request
-spyfu.weekly_tracking_api.get_term_data(...).request
-spyfu.weekly_tracking_api.delete_terms(...).request
+spyfu.weekly_tracking_api.add_terms(...)
+spyfu.weekly_tracking_api.get_groups(...)
+spyfu.weekly_tracking_api.get_terms(...)
+spyfu.weekly_tracking_api.get_term_data(...)
+spyfu.weekly_tracking_api.delete_terms(...)
 ```
 
 # Known Issues
