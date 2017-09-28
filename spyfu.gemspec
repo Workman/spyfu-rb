@@ -5,7 +5,7 @@ Gem::Specification.new do |s|
   s.summary     = "A simple API wrapper for Spyfu.com"
   s.description = "The unofficial ruby gem for Spyfu.com"
   s.authors     = ["Robert Graff", "Reid Workman"]
-  s.email       = 'rgraff@workingdemo.com'
+  s.email       = 'workman@internetfaction.com'
   s.files       = ["lib/spyfu.rb"]
   s.homepage    = 'https://github.com/Workman/spyfu-rb'
   s.license     = 'MIT'

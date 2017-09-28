@@ -12,6 +12,16 @@ result = spyfu.kss_api.get_term_page_keywords(:q => 'spyfu api', :r => 100).requ
 result.body # API returns a JSON object with results
 ```
 
+# Getting Started
+
+Get started by `gem install spyfu` or in your Gemfile:
+
+```ruby
+gem 'spyfu'
+```
+
+# API
+
 ## Ad History API
 
 You can access the [Core API](https://www.spyfu.com/api/docs/core).
